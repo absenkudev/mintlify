@@ -1,0 +1,308 @@
+---
+title: "Plan: Pengembangan 2026"
+description: "Ini adalah rencana pengembangan aplikasi web Absenku Generic berdasarkan tingkat kesulitan."
+---
+
+<Tabs>
+  <Tab title="Mudah">
+    ## — Pengerjaan Cepat
+
+    ## General
+
+    - karyawan yang non aktif tidak ditampilkan pada filter karyawan ✅
+      - menu:
+        1. Jadwal shift
+        2. Pengumuman
+        3. Pengajuan Izin
+        4. Pengajuan Lembur
+
+    ## Master Data
+
+    ### Jabatan
+
+    - level 1 dihilangkan ✅
+
+    ### Karyawan
+
+    - menambahkan pengaturan lock lokasi lembur
+    - tidak bisa menambahkan level administrator ✅
+    - jika hapus data karyawan dengan jabatan supervisi, pada popup menampilkan pegawai bawahanya dan bisa mengganti supervisi ✅
+    - tidak bisa edit saldo cuti (disable), karena kondisi saat ini tidak menambahkan history cuti ✅
+    - status karyawan ditambah
+      1. Kontrak
+      2. Training
+      3. Probation
+      4. Tetap
+      5. Habis Masa Training, Probation, atau Kontrak
+      6. Pensiun
+      7. Resign(Mengundurkan Diri)
+      8. PHK(Dikeluarkan)
+
+    ### Lokasi
+
+    - bisa multi cabang ketika tambah lokasi
+
+    ### Shift
+
+    - bisa multi cabang ketika tambah data ✅
+    - bisa bulk delete
+
+    ## Pengaturan
+
+    ### Umum
+
+    - tambah pengaturan untuk cuti apakah bisa minus atau tidak
+
+    ### Jadwal Shift
+
+    - download jadwal shift ✅
+
+    ## Dashboard
+
+    ### Absensi
+
+    - Menampilkan top 10 pelanggaran dan disiplin
+    - Download grafik
+    - Jadwal kerja hari ini
+
+    ### Kepegawaian
+
+    - karyawan yang akan berakhir masa kontrak
+      - tampilkan karyawan yang akan segera berakhir masa training, probation, dan kontrak H-30
+      - tampilkan karyawan yang sudah berakhir masa training, probation, dan kontrak H+1
+
+    ## Kelola Absensi
+
+    - foto dan nama lokasi di tampilkan di datatable ✅
+
+    ## Informasi
+
+    ### Berita
+
+    - menu dihilangkan ✅
+
+    ### Pengumuman
+
+    - menambahkan link, gambar, file
+
+    ## — Pengerjaan Lama
+
+    ## Responsive ⌛
+
+    - DataTable
+      - scroll horizontal header tidak ikut tergeser pada layar kecil
+    - Filter Data
+
+    ## General
+
+    1. DataTable (kerjakan salah satu sebagai sample) ⌛
+       1. Tombol kembali sesuai pagination sebelumnya
+       2. Ketika filter atau cari, reset halaman ke-1
+    1. cek level disemua menu (tidak boleh menampilkan level diatasnya)
+    2. ketika delete menampilkan informasi yang akan dihapus pada menu: ⌛
+       1. Master Data
+          - Lokasi
+          - Karyawan
+       2. Kelola Absensi
+          - Laporan Absensi
+          - Pengajuan Lembur
+          - Pengajuan Izin
+          - Laporan Aktivitas
+       3. Pengumuman
+       4. Payroll
+          - Data Komponen Tetap
+          - Data Komponen Tidak Tetap
+          - Data Komponen Kehadiran
+          - Hitung Gaji
+       5. Sales Monitoring
+          - Master -\> tahapan penjualan
+
+    ## Fitur Baru
+
+    1. Header fixed/freeze pada semua datatable
+    2. Rekap Tahunan
+    3. Rekap Kuartal
+
+    ## Master Data
+
+    ### Lokasi
+
+    - geo fencing
+
+    ### Shift
+
+    - warna shift
+
+    ## Pengaturan
+
+    ### Umum
+
+    - pengaturan lock lokasi untuk lembur
+    - pengaturan per cabang untuk setiap pengaturan
+    - tambah pengaturan untuk update otomatis status karyawan menjadi habis masa training,probation,kontrak (YA/TIDAK)
+      - di update berapa hari setelah tanggal berakhir masa training,probation,kontrak
+      - bisa berdasarkan karyawan, cabang, departemen
+      - tambah CRON untuk update otomatis
+
+    ### Hari Libur ⌛
+
+    - ketika tambah data ada pilihan mengurangi saldo cuti atau tidak
+    - jika terlambat setting hari libur, maka update data absensi
+
+    ### Approval
+
+    - jika cabang lebih dari 5, tampilkan data dengan data Table
+  </Tab>
+  <Tab title="Sedang">
+    ## Fitur Baru
+
+    1. izin terlambat dan izin pulang cepat
+    2. pengajuan revisi absensi
+    3. tukar shift
+       - ambil dari astrini
+       - long shift
+       - history perubahan shift
+    4. Pengaturan Supervisi
+       - ketika supervisi resign tampil karyawan yang dibawahnya
+       - harus menentukan bisa menentukan SPV penggantinya(opsional)
+       - bisa menambah multi bawahanya
+    5. Payroll
+       - kasbon(Web dan Mobile)
+         - pengaturan karyawan bisa mengajukan dan tidak
+       - gaji harian
+    6. log admin
+    7. impersonate pelanggan
+    8. toleransi keterlambatan
+
+    ## Dashboard
+
+    - Badge notif dijadikan seperti mobile
+      - dijadikan satu lonceng dan ada beberapa tab
+
+    ## Master Data
+
+    ### Jenis Izin
+
+    - izin, cuti 1/2 hari
+    - tahun cuti
+    - cuti tidak dibayar
+    - delegasi pekerjaan ketika cuti, izin, sakit, dinas luar
+
+    ### Cuti
+
+    - Tahun saldo cuti
+    - Cuti setengah hari
+    - Alpa mengurangi saldo cuti(pengaturan umum dengan CRON)
+
+    ## Pengaturan
+
+    ### Admin
+
+    ##### — Absensi
+
+    - admin absensi redaksional diganti admin
+    - pengaturan admin bisa memilih cabang
+    - pengaturan admin bisa mengatur permission(crud)
+
+    ##### — Payroll
+
+    - bisa memilih berdasarkan cabang, jabatan
+
+    ### Jam kerja
+
+    - total jam kerja per hari
+    - jam istirahat memotong jam kerja atau tidak
+    - jam kerja khusus(5 hari / 6 hari kerja)
+
+    ## Kelola Absensi
+
+    ### Pengajuan izin
+
+    - menampilkan data karyawan yang mengajukan cuti yang sudah diapprove atau belum
+    - mengubah tanggal dan jam izin
+    - mengubah status approval
+    - filter tanggal ada pilihan periode dan pengajuan
+    - approval all
+    - mengembalikan saldo cuti ketika data dihapus yang flagnya mengurangi saldo cuti
+    - bisa tambah data jenis cuti meskipun saldo cutinya 0
+
+    ### Laporan Absensi
+
+    - pengaturan untuk menampilkan kolom
+
+    ### Rekap Absensi
+
+    - pengaturan freeze kolom
+
+    ### Pengajuan lembur
+
+    - mengubah tanggal dan jam lembur
+    - mengubah status approval
+    - approval all
+    - bisa edit keterangan
+
+    ### Laporan Aktivitas
+
+    - menautkan data ke salmon
+
+    ## Payroll
+
+    ### BPJS
+
+    - pengaturan siapa saja yang mendapatkan BPJS Kes dan TK
+    - pengaturan bulan berapa BPJS Kes dan TK per bulan berapa
+    - pengaturan bulan berapa BPJS Kes dan TK di non aktifkan
+    - pengaturan batas atas JP
+    - Pengaturan BPJS TK yang mendapatkan komponen jaminan per karyawan
+
+    ### PPH21
+
+    - perhitungan pph21 jika pelanggan berlangganan di pertengahan tahun
+    - pph21 di tanggung oleh perusahaan, tetapi di slip gaji dipotong.
+    - pph21 untuk karyawan tidak tetap
+    - pph21 untuk karyawan probation, training
+    - perhitungan pph21 untuk tenaga ahli(dokter, perawat)
+
+    ### Data Komponen Tidak Tetap
+
+    - perbaiki fitur import ketika ada komponen yang tertinggal
+
+    ### Hitung Gaji
+
+    - hitung gaji lampau karyawan baru tetap terhitung
+
+    ### Master Komponen
+
+    - menambahkan validasi spesial karakter
+    - reorder komponen belum support lebih dari 1 halaman
+    - menambahkan komponen kedisiplinan dalam komponen kehadiran
+  </Tab>
+  <Tab title="Sulit">
+    ## Fitur Baru
+
+    1. Asset Management (perlu explore)
+    2. SP(TEB)
+    3. 
+  </Tab>
+</Tabs>
+
+## Note
+
+```
+Dashboard:
+- Absensi: Planing resign
+
+Jadwal shift:
+- informasi jika ada shift yang belum diterapkan di karyawan
+
+Shift:
+- pola shift
+```
+
+# Sales Monitoring
+
+1. ketika tambah aktivitas baru, buat draft dahulu kemudian ketika tambah lead baru dapat panggil aktivitas yang di draft
+2. reminder setiap dia beraktivitas kecuali tahapan closed stage ketika melakukan aktivitas, dapat set aktivitas selanjutnya akan melakukan apa, sehingga akan membuat reminder
+3. pada approval activity, dapat lihat detail penggalannya dan dapat approve melalui halaman detail tersebut
+4. import data kanban
+5. menampilkan dan download data seluruh pelanggan

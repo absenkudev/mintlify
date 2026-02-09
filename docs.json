@@ -12,7 +12,9 @@
         "pages": [
           {
             "group": "WEB DEVELOPER",
-            "pages": []
+            "pages": [
+              "plan-pengembangan-2026"
+            ]
           },
           {
             "group": "MOBILE DEVELOPER",

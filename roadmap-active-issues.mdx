@@ -1,0 +1,634 @@
+---
+title: "Roadmap: Active Issues"
+description: "Daftar active issues dari Linear.app untuk project Absenku Profesional"
+---
+
+# Linear Issues - Absenku Profesional
+
+Project milestone: **Pengembangan 2026**
+
+---
+
+## Summary Statistics
+
+<CardGroup cols={4}>
+  <Card title="Needs Refinement" icon="pencil" color="#8b5cf6">
+    6 issues
+  </Card>
+  <Card title="Todo" icon="list-check" color="#6366f1">
+    4 issues
+  </Card>
+  <Card title="In Progress" icon="spinner" color="#f59e0b">
+    4 issues
+  </Card>
+  <Card title="In Review" icon="eye" color="#10b981">
+    2 issues
+  </Card>
+</CardGroup>
+
+<CardGroup cols={1}>
+  <Card title="On Hold/Paused" icon="pause" color="#6b7280">
+    1 issue
+  </Card>
+</CardGroup>
+
+---
+
+<Tabs>
+  <Tab title="Needs Refinement">
+    ## WEB-444: Tambah fitur pengaturan pilih lokasi lembur per-karyawan
+
+    <Info>
+      **Status:** Needs Refinement\
+      **Priority:** No priority\
+      **Assignee:** Lalang Trendy Buana\
+      **Labels:** Enhancement\
+      **Created:** 2026-01-30\
+      **Related:** WEB-425
+    </Info>
+    ### Deskripsi
+
+    Tambahkan pengaturan pilihan lokasi lembur per-karyawan di Master Karyawan sehingga karyawan hanya dapat absen lembur berdasarkan lokasi yang di setting.
+
+    <Card title="Linear Link" icon="link" href="https://linear.app/work-absenku/issue/WEB-444/tambah-fitur-pengaturan-pilih-lokasi-lembur-per-karyawan">
+      View on Linear.app
+    </Card>
+    ---
+
+    ## WEB-418: Tambah fitur lampiran link, gambar, dan file pada pengumuman
+
+    <Info>
+      **Status:** Needs Refinement\
+      **Priority:** No priority\
+      **Assignee:** Lalang Trendy Buana\
+      **Labels:** Enhancement\
+      **Created:** 2026-01-22
+    </Info>
+    ### Overview
+
+    Tambahkan fitur untuk melampirkan link eksternal, gambar/foto, dan file dokumen pada form pengumuman, sehingga HR dapat membuat pengumuman yang lebih informatif dan engaging dengan mendukung berbagai jenis konten:
+
+    - **Hyperlink** (misal: link form, website)
+    - **Gambar ilustrasi**
+    - **File attachment** (PDF, Excel, Word, dll)
+
+    <Card title="Linear Link" icon="link" href="https://linear.app/work-absenku/issue/WEB-418/tambah-fitur-lampiran-link-gambar-dan-file-pada-pengumuman">
+      View on Linear.app
+    </Card>
+    ---
+
+    ## WEB-427: Tambah pengaturan saldo cuti minus
+
+    <Info>
+      **Status:** Needs Refinement\
+      **Priority:** No priority\
+      **Assignee:** Lalang Trendy Buana\
+      **Labels:** Enhancement\
+      **Created:** 2026-01-22\
+      **Blocking:** WEB-445, WEB-439
+    </Info>
+    ### Overview
+
+    Tambahkan fitur di pengaturan umum untuk mengontrol apakah karyawan diperbolehkan mengambil cuti meskipun saldo cuti sudah habis (minus/negatif) atau tidak. Pengaturan ini berlaku untuk satu company.
+
+    <Card title="Linear Link" icon="link" href="https://linear.app/work-absenku/issue/WEB-427/tambah-pengaturan-saldo-cuti-minus">
+      View on Linear.app
+    </Card>
+    ---
+
+    ## WEB-425: Tambah fitur lock lokasi lembur
+
+    <Info>
+      **Status:** Needs Refinement\
+      **Priority:** No priority\
+      **Assignee:** Lalang Trendy Buana\
+      **Labels:** Enhancement\
+      **Created:** 2026-01-22\
+      **Related:** WEB-444
+    </Info>
+    ### Overview
+
+    Tambah fitur di Pengaturan Umum untuk setting lock lokasi lembur YA/TIDAK yang berlaku untuk satu company.
+
+    **Behaviour:**
+
+    1. **Jika YA:** Absen lembur berdasarkan lokasi lembur yang di setting per-karyawan
+    2. **Jika TIDAK:** Bisa absen lembur diluar dari lokasi yang di setting
+
+    <Card title="Linear Link" icon="link" href="https://linear.app/work-absenku/issue/WEB-425/tambah-fitur-lock-lokasi-lembur">
+      View on Linear.app
+    </Card>
+    ---
+
+    ## WEB-426: Tambah fitur multi-select cabang pada form master lokasi
+
+    <Info>
+      **Status:** Needs Refinement\
+      **Priority:** No priority\
+      **Assignee:** Lalang Trendy Buana\
+      **Labels:** Enhancement\
+      **Created:** 2026-01-22
+    </Info>
+    ### Overview
+
+    Tambahkan fitur multi-select cabang pada form master lokasi agar satu lokasi dapat di-assign ke banyak cabang sekaligus, menggantikan sistem sekarang yang hanya support satu cabang per lokasi.
+
+    <Note>
+      Fitur ini diperlukan untuk handle kasus banyak cabang berada di satu lokasi yang sama.
+    </Note>
+    <Card title="Linear Link" icon="link" href="https://linear.app/work-absenku/issue/WEB-426/tambah-fitur-multi-select-cabang-pada-form-master-lokasi">
+      View on Linear.app
+    </Card>
+    ---
+
+    ## WEB-445: Tambah validasi pengajuan izin berdasarkan pengaturan saldo cuti minus
+
+    <Info>
+      **Status:** Needs Refinement\
+      **Priority:** No priority\
+      **Assignee:** Lalang Trendy Buana\
+      **Labels:** Enhancement\
+      **Created:** 2026-01-30\
+      **Blocked by:** WEB-427
+    </Info>
+    ### Overview
+
+    Saat ini form pengajuan izin tidak mengecek pengaturan saldo cuti minus, menyebabkan validasi tidak sesuai company policy.
+
+    ### Requirements
+
+    Implementasikan validasi yang membaca pengaturan umum:
+
+    - Jika tidak diperbolehkan minus dan saldo cuti telah habis
+    - Tampilkan pesan error ketika saldo tidak cukup
+
+    <Card title="Linear Link" icon="link" href="https://linear.app/work-absenku/issue/WEB-445/tambah-validasi-pengajuan-izin-berdasarkan-pengaturan-saldo-cuti-minus">
+      View on Linear.app
+    </Card>
+  </Tab>
+  <Tab title="Todo">
+    ## WEB-423: Tambah daftar karyawan yang akan/sudah berakhir masa training, probation, dan kontrak pada dashboard kepegawaian
+
+    <Info>
+      **Status:** Todo\
+      **Priority:** No priority\
+      **Assignee:** Lalang Trendy Buana\
+      **Labels:** Enhancement\
+      **Created:** 2026-01-22
+    </Info>
+    ### Overview
+
+    Tambahkan 2 section daftar karyawan untuk membantu HR track masa kerja karyawan:
+
+    <CardGroup cols={2}>
+      <Card title="Akan Berakhir" icon="clock">
+        Untuk karyawan yang akan berakhir masa training, probation, atau kontrak **(H-30)**
+      </Card>
+      <Card title="Sudah Berakhir" icon="circle-exclamation">
+        Untuk karyawan yang sudah melewati tanggal berakhir masa kerja **(H+1)**
+      </Card>
+    </CardGroup>
+    <Card title="Linear Link" icon="link" href="https://linear.app/work-absenku/issue/WEB-423/tambah-daftar-karyawan-yang-akansudah-berakhir-masa-training-probation">
+      View on Linear.app
+    </Card>
+    ---
+
+    ## WEB-443: Tambah fitur bulk delete dengan checkbox pada master data shift
+
+    <Info>
+      **Status:** Todo\
+      **Priority:** No priority\
+      **Assignee:** Lalang Trendy Buana\
+      **Labels:** Enhancement\
+      **Created:** 2026-01-30
+    </Info>
+    ### Overview
+
+    Tambahkan fitur bulk delete untuk memudahkan HR menghapus banyak shift sekaligus menggunakan checkbox selection, menggantikan proses hapus satu-per-satu yang tidak efisien.
+
+    <Card title="Linear Link" icon="link" href="https://linear.app/work-absenku/issue/WEB-443/tambah-fitur-bulk-delete-dengan-checkbox-pada-master-data-shift">
+      View on Linear.app
+    </Card>
+    ---
+
+    ## WEB-440: Ubah tampilan cabang menjadi table jika jumlah \> 5
+
+    <Info>
+      **Status:** Todo\
+      **Priority:** No priority\
+      **Assignee:** Lalang Trendy Buana\
+      **Labels:** Enhancement\
+      **Created:** 2026-01-29
+    </Info>
+    ### Overview
+
+    Ubah tampilan dari card → table ketika jumlah data \> 5
+
+    ### Context
+
+    Saat ini semua data cabang ditampilkan dalam section card per-cabang, tapi jika cabang banyak (\> 5) menjadi sulit dibaca dan tidak user-friendly.
+
+    #### Current Behavior
+
+    - Semua cabang ditampilkan dalam section card
+    - Scroll panjang jika cabang banyak
+
+    ### Requirements
+
+    <Steps>
+      <Step title="Deteksi jumlah cabang">
+        Implementasi logic untuk menghitung total cabang
+      </Step>
+      <Step title="Kondisional tampilan">
+        Ubah tampilan: section card vs table berdasarkan jumlah
+      </Step>
+      <Step title="Responsive design">
+        Pastikan responsive untuk mobile
+      </Step>
+    </Steps>
+    ### Acceptance Criteria
+
+    - ✅ Ketika cabang ≤ 5, tampilan tetap seperti sekarang
+    - ✅ Ketika cabang \> 5, otomatis tampilan menjadi table
+    - ✅ Tampilan responsive di mobile dan desktop
+
+    ### Testing
+
+    - Test data ≤ 5 dan \> 5
+    - Test tampilan responsive
+
+    <Card title="Linear Link" icon="link" href="https://linear.app/work-absenku/issue/WEB-440/ubah-tampilan-cabang-menjadi-table-jika-jumlah-5">
+      View on Linear.app
+    </Card>
+    ---
+
+    ## WEB-419: Ubah struktur status karyawan dengan 8 kategori pada master karyawan
+
+    <Info>
+      **Status:** Todo\
+      **Priority:** No priority\
+      **Assignee:** Lalang Trendy Buana\
+      **Labels:** Enhancement\
+      **Created:** 2026-01-22
+    </Info>
+    ### Overview
+
+    Ubah struktur status karyawan dari yang sekarang menjadi 8 kategori:
+
+    <CardGroup cols={2}>
+      <Card title="1. Kontrak" icon="file-contract">
+        
+      </Card>
+      <Card title="2. Training" icon="graduation-cap">
+        
+      </Card>
+      <Card title="3. Probation" icon="hourglass-half">
+        
+      </Card>
+      <Card title="4. Tetap" icon="check-circle">
+        
+      </Card>
+      <Card title="5. Resign" icon="person-walking-arrow-right">
+        Mengundurkan Diri
+      </Card>
+      <Card title="6. PHK" icon="user-xmark">
+        Dikeluarkan
+      </Card>
+      <Card title="7. Pensiun" icon="umbrella-beach">
+        
+      </Card>
+      <Card title="8. Habis Masa" icon="calendar-xmark">
+        Training/Probation/Kontrak
+      </Card>
+    </CardGroup>
+    <Card title="Linear Link" icon="link" href="https://linear.app/work-absenku/issue/WEB-419/ubah-struktur-status-karyawan-dengan-8-kategori-pada-master-karyawan">
+      View on Linear.app
+    </Card>
+  </Tab>
+  <Tab title="In Progress">
+    ## WEB-439: Tambah opsi potong saldo cuti dan auto-update absensi ketika setting hari libur backdate
+
+    <Info>
+      **Status:** In Progress\
+      **Priority:** No priority\
+      **Assignee:** Lalang Trendy Buana\
+      **Labels:** Enhancement\
+      **Created:** 2026-01-29\
+      **Blocked by:** WEB-427\
+      **Updated:** 2026-02-02
+    </Info>
+    ### Overview
+
+    Tambahkan 2 fitur untuk meningkatkan manajemen absensi:
+
+    <AccordionGroup>
+      <Accordion title="1. Opsi potong saldo cuti" icon="scissors">
+        Opsi untuk memilih apakah pengajuan izin/sakit/cuti akan mengurangi saldo cuti atau tidak
+      </Accordion>
+      <Accordion title="2. Auto-update absensi backdate" icon="calendar-check">
+        Auto-update data absensi karyawan ketika HR lupa/terlambat setting hari libur, sehingga absensi yang tadinya tercatat alpha/hadir akan otomatis berubah menjadi libur
+      </Accordion>
+    </AccordionGroup>
+    ### Comments
+
+    <Note>
+      **Lalang Trendy Buana** - 29/1/2026
+    </Note>
+    <Card title="Linear Link" icon="link" href="https://linear.app/work-absenku/issue/WEB-439/tambah-opsi-potong-saldo-cuti-dan-auto-update-absensi-ketika-setting">
+      View on Linear.app
+    </Card>
+    ---
+
+    ## WEB-438: Tambah informasi detail data yang dihapus ketika melakukan aksi hapus data
+
+    <Info>
+      **Status:** In Progress\
+      **Priority:** No priority\
+      **Assignee:** Lalang Trendy Buana\
+      **Labels:** Enhancement\
+      **Created:** 2026-01-29\
+      **Related:** WEB-412
+    </Info>
+    ### Context
+
+    Saat ini ketika hapus data tidak ada informasi detail data yang dihapus itu apa, dan ditakutkan pelanggan salah hapus data. Untuk mencegah itu perlu menambahkan informasi pada popup hapus data.
+
+    ### Menu yang Belum Menampilkan Informasi
+
+    <AccordionGroup>
+      <Accordion title="Master Data" icon="database">
+        - Lokasi
+        - Karyawan
+      </Accordion>
+      <Accordion title="Kelola Absensi" icon="clock">
+        - Laporan Absensi
+        - Pengajuan Lembur
+        - Pengajuan Izin
+        - Laporan Aktivitas
+      </Accordion>
+      <Accordion title="Pengumuman" icon="bullhorn">
+        Semua data pengumuman
+      </Accordion>
+      <Accordion title="Payroll" icon="money-bill">
+        - Data Komponen Tetap
+        - Data Komponen Tidak Tetap
+        - Data Komponen Kehadiran
+        - Hitung Gaji
+      </Accordion>
+      <Accordion title="Sales Monitoring" icon="chart-line">
+        - Master → Tahapan penjualan
+      </Accordion>
+    </AccordionGroup>
+    ### Requirements
+
+    - Update semua popup konfirmasi hapus data untuk menampilkan informasi detail record yang akan dihapus
+
+    ### Acceptance Criteria (Berlaku untuk Semua Menu)
+
+    - Ketika user klik aksi 🗑️ (Hapus), muncul popup konfirmasi dengan informasi detail data
+
+    ### Testing
+
+    - Test informasi detail berdasarkan menu dan data yang dihapus
+
+    ### Comments
+
+    <Note>
+      **Lalang Trendy Buana** - 26/1/2026\
+      Related: [WEB-412](https://linear.app/work-absenku/issue/WEB-412/master-karyawan)
+    </Note>
+    <Card title="Linear Link" icon="link" href="https://linear.app/work-absenku/issue/WEB-438/tambah-informasi-detail-data-yang-dihapus-ketika-melakukan-aksi-hapus">
+      View on Linear.app
+    </Card>
+    ---
+
+    ## WEB-437: Fix default halaman pada DataTable
+
+    <Info>
+      **Status:** In Progress\
+      **Priority:** No priority\
+      **Assignee:** Lalang Trendy Buana\
+      **Labels:** Bug, Enhancement\
+      **Created:** 2026-01-29\
+      **Related:** WEB-436, WEB-415
+    </Info>
+    ### Context
+
+    #### Problem 1: State Persistence
+
+    Ketika berada dihalaman \> 1 dan klik detail pada record data, kemudian kembali ke tampilan record data sebelumnya otomatis ke halaman 1.
+
+    **Solusi:** Menyimpan halaman terakhir yang dibuka untuk kemudahan user.
+
+    ```javascript
+    "stateSave": true
+    ```
+
+    #### Problem 2: Filter/Search Reset
+
+    Ketika berada dihalaman \> 1 dan melakukan Filter atau Cari, datatable tidak otomatis reset halaman ke-1 sehingga data tidak ditemukan, padahal hanya berada dihalaman yang salah.
+
+    **Solusi:** Menambahkan kondisi ketika klik tombol Filter atau Cari.
+
+    ```javascript
+    $('#list_data').DataTable().state.clear();
+    ```
+
+    ### Comments
+
+    <Note>
+      **Lalang Trendy Buana** - 29/1/2026
+    </Note>
+    <Card title="Linear Link" icon="link" href="https://linear.app/work-absenku/issue/WEB-437/fix-default-halaman-pada-datatable">
+      View on Linear.app
+    </Card>
+    ---
+
+    ## WEB-435: Fix UI responsive pada tampilan mobile, tablet dan desktop
+
+    <Info>
+      **Status:** In Progress\
+      **Priority:** No priority\
+      **Assignee:** Lalang Trendy Buana\
+      **Labels:** Bug, Enhancement\
+      **Created:** 2026-01-29\
+      **Related:** WEB-415
+    </Info>
+    ### Context
+
+    Saat ini pada tampilan responsive untuk mobile dan tablet kurang sempurna, sehingga ketika pengguna membuka terdapat aksi atau tampilan yang tidak terlihat karena overflow.
+
+    ### UI Responsive yang Perlu Diperbaiki
+
+    <AccordionGroup>
+      <Accordion title="Datatable" icon="table">
+        - Scroll horizontal header tidak ikut tergeser pada layar kecil
+        - Pastikan semua kolom table accessible dengan scroll horizontal
+        - Pastikan action buttons (edit, hapus, view) tetap visible dan clickable
+      </Accordion>
+      <Accordion title="Filter Data" icon="filter">
+        - Fix layout filter yang overflow di layar kecil
+        - Pastikan semua input field filter accessible dan tidak terpotong
+        - Fix spacing dan padding filter di berbagai screen sizes
+      </Accordion>
+    </AccordionGroup>
+    ### Acceptance Criteria
+
+    - Sistem menampilkan UI yang optimal untuk setiap breakpoint tanpa broken layout
+
+    ### Testing
+
+    - Test UI responsive bekerja dengan baik di berbagai device
+
+    ### Comments
+
+    <Note>
+      **Lalang Trendy Buana** - 28/1/2028\
+      Related: [WEB-415](https://linear.app/work-absenku/issue/WEB-415/pengaturan-jadwal-shift)
+    </Note>
+    <Card title="Linear Link" icon="link" href="https://linear.app/work-absenku/issue/WEB-435/fix-ui-responsive-pada-tampilan-mobile-tablet-dan-desktop">
+      View on Linear.app
+    </Card>
+  </Tab>
+  <Tab title="In Review">
+    ## WEB-415: Tambah download jadwal shift, perbaiki responsive, dan cleanup code
+
+    <Info>
+      **Status:** In Review\
+      **Priority:** No priority\
+      **Assignee:** Lalang Trendy Buana\
+      **Labels:** Enhancement, Refactor, Technical Debt\
+      **Created:** 2026-01-22\
+      **Related:** WEB-437, WEB-435
+    </Info>
+    ### Overview
+
+    Improvement modul jadwal shift mencakup:
+
+    <CardGroup cols={3}>
+      <Card title="Fitur Baru" icon="plus" color="#22c55e">
+        Export jadwal shift ke Excel
+      </Card>
+      <Card title="Bug Fix" icon="wrench" color="#f59e0b">
+        Perbaikan layout responsive yang rusak di mobile dan tablet
+      </Card>
+      <Card title="Code Cleanup" icon="broom" color="#3b82f6">
+        Refactoring dan optimization
+      </Card>
+    </CardGroup>
+    ### Bug Fix Details
+
+    - Table horizontal scroll
+    - Button overlap
+    - Form alignment
+
+    ### Code Cleanup Details
+
+    - Remove dead code
+    - Consolidate duplicate functions
+    - Optimize database queries
+
+    ### Comments
+
+    <Note>
+      **Lalang Trendy Buana** - 27/1/2026
+    </Note>
+    <Note>
+      **Lalang Trendy Buana** - 28/1/2026
+    </Note>
+    <Card title="Linear Link" icon="link" href="https://linear.app/work-absenku/issue/WEB-415/tambah-download-jadwal-shift-perbaiki-responsive-dan-cleanup-code">
+      View on Linear.app
+    </Card>
+    ---
+
+    ## WEB-412: Tambah handling untuk supervisi: reassign subordinate saat delete/update status supervisi
+
+    <Info>
+      **Status:** In Review\
+      **Priority:** No priority\
+      **Assignee:** Lalang Trendy Buana\
+      **Labels:** Enhancement\
+      **Created:** 2026-01-22\
+      **Related:** WEB-438
+    </Info>
+    ### Overview
+
+    Tambahkan handling untuk manajemen subordinate ketika supervisi dihapus atau status berubah menjadi resign/PHK/pensiun:
+
+    <Steps>
+      <Step title="Saat Delete Karyawan Supervisi">
+        Tampilkan popup konfirmasi dengan:
+
+        - List bawahan
+        - Option untuk reassign ke supervisi baru sebelum delete
+      </Step>
+      <Step title="Saat Update Status Supervisi">
+        Ketika status berubah menjadi **Resign**, **PHK**, atau **Pensiun**:
+
+        - Otomatis update supervisi karyawan bawahannya menjadi kosong
+        - Atau redirect ke supervisi pengganti
+      </Step>
+    </Steps>
+    ### Comments
+
+    <Note>
+      **Lalang Trendy Buana** - 26/1/2025
+    </Note>
+    <Card title="Linear Link" icon="link" href="https://linear.app/work-absenku/issue/WEB-412/tambah-handling-untuk-supervisi-reassign-subordinate-saat-deleteupdate">
+      View on Linear.app
+    </Card>
+  </Tab>
+  <Tab title="On Hold/Paused">
+    ## WEB-406: Struktur Database - Asset
+
+    <Info>
+      **Status:** On Hold/Paused\
+      **Priority:** No priority\
+      **Assignee:** Lalang Trendy Buana\
+      **Labels:** Feature\
+      **Created:** 2026-01-15\
+      **Updated:** 2026-01-30
+    </Info>
+    ### Overview
+
+    Membuat struktur database untuk fitur baru (asset).
+
+    ### Comments
+
+    <Accordion title="Timeline Progress">
+      <Note>
+        **Lalang Trendy Buana** - 15/1/2026
+      </Note>
+      <Note>
+        **Lalang Trendy Buana** - 19/1/2026
+      </Note>
+      <Note>
+        **Lalang Trendy Buana** - 20/1/2026
+      </Note>
+    </Accordion>
+    <Warning>
+      Issue ini sedang dalam status **On Hold/Paused** - development ditunda sementara.
+    </Warning>
+    <Card title="Linear Link" icon="link" href="https://linear.app/work-absenku/issue/WEB-406/struktur-database-asset">
+      View on Linear.app
+    </Card>
+  </Tab>
+</Tabs>
+
+---
+
+## Issue Dependencies
+
+### Blocking Relationships
+
+<CardGroup cols={2}>
+  <Card title="WEB-427 Blocks" icon="lock" color="#ef4444">
+    - WEB-445 (Validasi saldo cuti)
+    - WEB-439 (Opsi potong saldo cuti)
+  </Card>
+  <Card title="Related Issues" icon="link" color="#3b82f6">
+    - WEB-444 ↔ WEB-425 (Lokasi lembur)
+    - WEB-415 ↔ WEB-437, WEB-435 (Jadwal shift)
+    - WEB-412 ↔ WEB-438 (Master karyawan)
+  </Card>
+</CardGroup>

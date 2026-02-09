@@ -1,0 +1,198 @@
+---
+title: "LIST SEAMLESS FITUR"
+---
+
+## 1. Pengaturan Lembur & Lokasi (Multi-Branch)
+
+Untuk menjaga integritas data, sistem kini mendukung pembatasan lokasi yang lebih spesifik.
+
+**Lock Lokasi Lembur:** Karyawan wajib melakukan absensi lembur di lokasi yang telah ditentukan. Jika berada di luar radius, tombol lembur akan terkunci.
+
+**Multi-Cabang:** \* Sistem mendukung pendaftaran koordinat untuk banyak kantor cabang.
+
+<Tooltip tip="">Karyawan dapat diatur agar hanya bisa absen di cabang tertentu atau di semua cabang yang terdaftar.</Tooltip>
+
+<Tabs>
+  <Tab title="Mobile">
+    <Update label="02/02/2026" description="">
+      Penambahan column lock_lokasi_lembur pada table data_karyawan
+
+      perubahan length id_cabang pada table lokasi_data_kantor untuk kebutuhan lebih dari 1 cabang
+    </Update>
+  </Tab>
+  <Tab title="Web">
+    <Update label="03/02/2026" description="">
+      ### Master Lokasi
+
+      1. Tambah fitur multi-select cabang pada form master lokasi
+      2. Refactor dan clean up code
+      3. Fix UI responsive pada mobile dan tablet
+      4. Tambah detail record pada popup hapus data
+    </Update>
+    <Update label="04/02/2026" description="">
+      ### Pengaturan Umum
+
+      1. Tambah fitur di Pengaturan Umum untuk setting lock lokasi lembur YA/TIDAK yang berlaku untuk satu company
+      2. Fix UI responsive pada tablet
+
+      ### Master Karyawan - Data Akun
+
+      1. Tambah pengaturan lock dan pilihan lokasi lembur
+    </Update>
+  </Tab>
+</Tabs>
+
+**PROGRESS:**
+
+| Mobile | WEB |
+| :----: | :-: |
+| ✅      | ✅   |
+
+---
+
+## 2. Pengumuman
+
+### 📢 Fitur Pengumuman
+
+Admin kini dapat memperkaya informasi pengumuman dengan:
+
+**Gambar:**  Menambahkan Gambar
+
+**URL:** Isi konten bisa di berikan link.
+
+<Tabs>
+  <Tab title="Web">
+    <Update label="05/02/2026" description="">
+      1. Tambahkan fitur untuk melampirkan gambar/foto, dan menambahkan link eksternal pada form pengumuman
+      2. Fix UI Responsive
+      3. Optimasi datatable
+      4. Tambah informasi untuk popup aksi hapus data
+      5. Tambah kolom `gambar` pada table `data_pengumuman`
+    </Update>
+  </Tab>
+</Tabs>
+
+**PROGRESS:**
+
+| Mobile | WEB |
+| :----: | :-: |
+| ⌛      | ✅   |
+
+---
+
+## 3. Keterangan Penolakan (Reject)
+
+Untuk meningkatkan transparansi, setiap penolakan oleh atasan wajib disertai alasan yang jelas.
+
+\> **Informasi Penting:**
+
+\> Saat atasan menolak pengajuan **Izin** atau **Lembur**, sistem akan memunculkan kolom wajib isi **"Keterangan Tolak"**. Alasan ini akan muncul secara real-time di aplikasi karyawan agar mereka tahu apa yang perlu diperbaiki.
+
+<Update label="03/02/2026">
+  Penambahan column ket_tolak pada table data_izin dan lembur_mulai
+</Update>
+
+**PROGRESS:**
+
+| Mobile | WEB |
+| :----: | :-: |
+| ✅      | ⏳   |
+
+---
+
+## 4. Pengaturan Umum
+
+Tambah pengaturan untuk setting periode absensi yang berpengaruh ke:
+
+1. Web
+   1. Default filter Laporan Absensi
+   2. Default filter Rekap Absensi
+1. Mobile
+   1. Rekap Absensi
+
+---
+
+## 5. Fitur Revisi Pengajuan Absensi
+
+Memungkinkan perbaikan data tanpa perlu menghapus pengajuan dari awal.
+
+| **Revisi Absensi** | Melakukan koreksi jam masuk/pulang jika terjadi kesalahan input atau kendala GPS. | https://www.figma.com/design/kohyKIuFke27K61DunI3Ga/Absenku-UI?node-id=6567-755&p=f
+
+# Alur Fitur Revisi Absensi
+
+Berikut adalah prosedur standar bagi pengguna untuk melakukan pengajuan perbaikan data kehadiran:
+
+---
+
+### 1. Akses Menu
+
+**Buka Menu Revisi Absensi:** Pengguna masuk ke menu **Revisi Absensi** melalui aplikasi.
+
+### 2. Pemilihan Data
+
+**Pilih Absensi:** Pengguna memilih data/tanggal absensi spesifik yang akan direvisi.
+
+### 3. Pengisian Formulir
+
+Pengguna melengkapi data pada form revisi:
+
+**Jenis Absensi:** Masuk atau Pulang.
+
+**Jam Absensi:** Menginput jam yang benar.
+
+**Alasan:** Penjelasan mengenai pengajuan revisi.
+
+### 4. Pengiriman Data
+
+**Kirim Pengajuan:** Pengguna menekan tombol **Kirim**.
+
+**Status Antrean:** Pengajuan masuk ke sistem dengan status **"Menunggu Persetujuan"** dari Atasan/Admin.
+
+---
+
+### 5. Proses Verifikasi (Atasan/Admin)
+
+Atasan atau Admin akan melakukan peninjauan dengan opsi:
+
+**Menyetujui:** Data absensi utama otomatis diperbarui.
+
+**Menolak:** Data absensi tetap seperti semula tanpa perubahan.
+
+### 6. Notifikasi & Riwayat
+
+**Notifikasi:** Pengguna menerima pemberitahuan hasil (Disetujui / Ditolak).
+
+**Riwayat Revisi:** Pengguna dapat memantau status dan daftar pengajuan lampau pada menu riwayat.
+
+> **SEQUENCE DIAGRAM**
+
+<Tabs>
+  <Tab title="MOBILE">
+    ![Revisi Absensi Pipeline 2026 02 09 033803](</absenku-developer-team/mobile-developer/Revisi Absensi Pipeline-2026-02-09-033803.png>)
+  </Tab>
+</Tabs>
+
+<Update label="02/04/2026" description="">
+  Penambahan tabel data_revisi_absensi
+</Update>
+
+---
+
+## 6. Kebijakan Cuti & Pengumuman
+
+Fleksibilitas dalam administrasi saldo cuti dan peningkatan fitur komunikasi internal.
+
+### 🔘 Pengaturan Saldo Cuti (Minus)
+
+Admin dapat menentukan apakah perusahaan mengizinkan pengambilan cuti melampaui kuota:
+
+1. **Izin Minus:** Karyawan boleh mengambil cuti meski saldo habis (akan memotong jatah tahun depan).
+2. **Tidak Minus:** Sistem otomatis menolak pengajuan jika kuota sudah mencapai 0.
+
+---
+
+## 7. Fitur Revisi Pengajuan Izin
+
+Memungkinkan perbaikan data tanpa perlu menghapus pengajuan dari awal.
+
+| **Revisi Izin** | Mengubah tanggal, kategori izin, atau alasan pada pengajuan yang sedang diproses. |

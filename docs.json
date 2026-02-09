@@ -11,6 +11,12 @@
         "group": "ABSENSKU PROFESIONAL",
         "pages": [
           {
+            "group": "MOBILE AND WEB DEVELOPER",
+            "pages": [
+              "list-seamless-fitur"
+            ]
+          },
+          {
             "group": "WEB DEVELOPER",
             "pages": [
               "roadmap-active-issues",

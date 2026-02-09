@@ -8,8 +8,19 @@
   "navigation": {
     "groups": [
       {
-        "group": "Getting Started",
-        "pages": []
+        "group": "ABSENSKU PROFESIONAL",
+        "pages": [
+          {
+            "group": "WEB DEVELOPER",
+            "pages": []
+          },
+          {
+            "group": "MOBILE DEVELOPER",
+            "pages": [
+              "list-development"
+            ]
+          }
+        ]
       }
     ]
   }

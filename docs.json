@@ -11,9 +11,10 @@
         "group": "ABSENKU PROFESIONAL",
         "pages": [
           {
-            "group": "MOBILE AND WEB DEVELOPER",
+            "group": "MOBILE DEVELOPER",
             "pages": [
-              "list-seamless-fitur"
+              "upgrade-flutter-3-35-6",
+              "list-development"
             ]
           },
           {
@@ -24,10 +25,9 @@
             ]
           },
           {
-            "group": "MOBILE DEVELOPER",
+            "group": "MOBILE AND WEB DEVELOPER",
             "pages": [
-              "upgrade-flutter-3-35-6",
-              "list-development"
+              "list-seamless-fitur"
             ]
           }
         ]
